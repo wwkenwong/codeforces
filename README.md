@@ -33,6 +33,17 @@
 709C.cpp	
 711A.cpp	
 711B.cpp	
+101102H.cpp	
+101102E.cpp	
+719B.cpp	
+719A.cpp	
+712A.cpp	
+606A.cpp	
+618A.cpp	
+335B.cpp	
+55D.cpp	
+368B.cpp	
+445A.cpp
 README.md	Create README.md	
 edu_round16_A.cpp	
 template.cpp
