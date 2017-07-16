@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
-using namespace std;
+using namespace std;    
 int compare(const void*a ,const void*b){
 	return(*(int*)a-*(int*)b);
 }
