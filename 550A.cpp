@@ -13,26 +13,40 @@ using namespace std;
 char in[100000];
 int main(){
 	cin>>in;
-	bool ab=0;
-	bool ba=0;
 	int length=strlen(in);
-	for(int i=0;i<length-2;i++){
-		if(in[i]=='A'&&in[i+1]=='B'&&in[i+2]!='A'){
-			ab=1;
+
+	int itr=1;
+
+	for(;itr<length;itr++){
+		if(in[itr-1]=='A'&&in[itr]=='B'){
+			itr+=2;
+			break;
 		}
-		if(in[i]=='B'&&in[i+1]=='A'&&in[i+2]!='B'){
-			ba=1;
+	}
+
+	for(;itr<length;itr++){
+		if(in[itr-1]=='B'&&in[itr]=='A'){
+			cout<<"YES";
+			return 0;
 		}
 	}
-	if(in[length-1]=='A'&&in[length-2]=='B'&&in[length-3]!='A'){
-		ba=1;
+	itr=1;
+	for(;itr<length;itr++){
+		if(in[itr-1]=='B'&&in[itr]=='A'){
+			itr+=2;
+			break;
+		}
 	}
-	if(in[length-1]=='B'&&in[length-2]=='A'&&in[length-3]!='B'){
-		ab=1;
+
+	for(;itr<length;itr++){
+		if(in[itr-1]=='A'&&in[itr]=='B'){
+			cout<<"YES";
+			return 0;
+		}
 	}
-	if(ab&&ba){
-		cout<<"YES";
-	}else{
-		cout<<"NO";	
-	}
+
+
+	cout<<"NO";
+
+
 }
